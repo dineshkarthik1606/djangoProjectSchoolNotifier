@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<form method="post" id="sendMessageForm">
+    {% csrf_token %}
+    {% for message in messages %}
+        {% if message.tags == 'error'%}
+            <div class="alert alert-danger">{{ message }}</div>
+        {% else %}
+            <div class="alert alert-success">{{ message }}</div>
+        {% endif %}
+    {% endfor %}
+    <textarea id="mytextarea" name="textarea"></textarea>
+    <div style="float:left; margin-top: 20px">
+        <a onclick="selectedTelegram()"><input type="hidden" name="telegramFlag" id="telegramFlag" value="false"><i class="fa fa-telegram" id="telegram" style="font-size:48px;"></i></a>
+        <a onclick="selectedMail()"><input type="hidden" name="mailFlag" id="mailFlag" value="false"><i class="fa fa-envelope" id="mail" style="font-size:48px;color:grey;margin-left:5px"></i></a>
+    </div>
+    <button type="submit" class="sendMessage" onclick="checkFlag()">Send</button>
+</form>
+
+<script>
+    tinymce.init({
+    selector: '#mytextarea',
+    height : 700,
+    skin: 'oxide-dark',
+    toolbar: 'undo redo styleselect bold italic alignleft aligncenter alignright bullist numlist outdent indent',
+    plugins: 'advlist link image lists emoticons help paste wordcount searchreplace preview'
+    });
+    function selectedTelegram() {
+        if(document.getElementById("telegramFlag").value=="false"){
+            document.getElementById("telegram").style.color = "black";
+            document.getElementById("telegramFlag").value="true";
+        }
+        else if(document.getElementById("telegramFlag").value=="true"){
+            document.getElementById("telegram").style.removeProperty("color");
+            document.getElementById("telegramFlag").value="false"
+        }
+    }
+    function selectedMail() {
+        if(document.getElementById("mailFlag").value=="false"){
+            document.getElementById("mail").style.color = "black";
+            document.getElementById("mailFlag").value="true";
+
+            var formfield = document.getElementById('sendMessageForm');
+            var receiverEmailField = document.createElement('input');
+            receiverEmailField.setAttribute('type','text');
+            receiverEmailField.setAttribute('name','receiverEmailID');            
+            receiverEmailField.setAttribute('size',100);
+            receiverEmailField.setAttribute('class','receiverEmail');
+            receiverEmailField.setAttribute('placeholder','Enter receiver emailId');
+            formfield.appendChild(receiverEmailField);
+
+            var subjectField = document.createElement('input');
+            subjectField.setAttribute('type','text');
+            subjectField.setAttribute('name','mailSubject');            
+            subjectField.setAttribute('size',100);
+            subjectField.setAttribute('class','mailSubject');
+            subjectField.setAttribute('placeholder','Enter a subject for the mail');
+            formfield.appendChild(subjectField);
+        }
+        else if(document.getElementById("mailFlag").value=="true"){
+            document.getElementById("mail").style.color="grey"
+            document.getElementById("mailFlag").value="false"
+        }
+    }
+    function checkFlag() {
+        if (document.getElementById("mailFlag").value=="false" && document.getElementById("telegramFlag").value=="false"){
+            console.log("select a social media");
+        }
+        if (document.getElementById("mytextarea").value==""){
+            console.log("enter text to send");
+        }
+    }
+</script>
+{% endblock %}

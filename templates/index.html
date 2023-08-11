@@ -1,0 +1,90 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .exportBtn{
+    background: black;
+    border: none;
+    color: #ffffff;
+    -webkit-transition: 0.25s ease all;
+    transition: 0.25s ease all;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 45px;
+    padding: 8px;
+  }
+</style>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<div style="font-family:Verdana;">
+
+<div style="background-color:#f1f1f1;padding:15px;">
+  <h1>School Message Notifier</h1>
+  <h3>Send mass notifications through Telegram channel and Email</h3>
+</div>
+
+<div class="graph">
+  <h2>Dashboard</h2>
+  <div style="float: left; width: 50%">
+    <p>Some sample graphs to show the school and message statistics.</p>
+  </div>
+  <div style="float: right;">
+    <button type="submit" class="exportBtn" onclick="exportToPDF()">Export below Graphs <i class="fa fa-download" style="color:white"></i></button>
+  </div>
+  <img id="downloadasPDF5" src="data:image/png;base64,{{ graphic5|safe }}">
+  <img id="downloadasPDF7" src="data:image/png;base64,{{ graphic7|safe }}">
+  <div style="float: left; width: 50%">
+    <img id="downloadasPDF1" src="data:image/png;base64,{{ graphic1|safe }}"><br>
+    <img id="downloadasPDF6" src="data:image/png;base64,{{ graphic6|safe }}"><br>
+    <img id="downloadasPDF2" src="data:image/png;base64,{{ graphic2|safe }}">
+  </div>
+  <div style="float: right; width: 50%">
+    <img id="downloadasPDF8" src="data:image/png;base64,{{ graphic8|safe }}"><br>
+    <img id="downloadasPDF3" src="data:image/png;base64,{{ graphic3|safe }}"><br>
+    <img id="downloadasPDF4" src="data:image/png;base64,{{ graphic4|safe }}">        
+  </div>
+</div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.js" integrity="sha512-3FKAKNDHbfUwAgW45wNAvfgJDDdNoTi5PZWU7ak3Xm0X8u0LbDBWZEyPklRebTZ8r+p0M2KIJWDYZQjDPyYQEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+<script>
+  function exportToPDF() {
+    var zip = new JSZip();
+    graph1 = document.getElementById("downloadasPDF1").src;
+    graph2 = document.getElementById("downloadasPDF2").src;
+    graph3 = document.getElementById("downloadasPDF3").src;
+    graph4 = document.getElementById("downloadasPDF4").src;
+    graph5 = document.getElementById("downloadasPDF5").src;
+    graph6 = document.getElementById("downloadasPDF6").src;
+    graph7 = document.getElementById("downloadasPDF7").src;
+    graph8 = document.getElementById("downloadasPDF8").src;
+    basePic1=graph1.replace(/^data:image\/(png|jpg);base64,/, "");  
+    basePic2=graph2.replace(/^data:image\/(png|jpg);base64,/, "");
+    basePic3=graph3.replace(/^data:image\/(png|jpg);base64,/, "");
+    basePic4=graph4.replace(/^data:image\/(png|jpg);base64,/, "");
+    basePic5=graph5.replace(/^data:image\/(png|jpg);base64,/, "");
+    basePic6=graph6.replace(/^data:image\/(png|jpg);base64,/, "");
+    basePic7=graph7.replace(/^data:image\/(png|jpg);base64,/, "");
+    basePic8=graph8.replace(/^data:image\/(png|jpg);base64,/, "");  
+    zip.file("graph1.png", basePic1, {base64: true});
+    zip.file("graph2.png", basePic2, {base64: true});
+    zip.file("graph3.png", basePic3, {base64: true});
+    zip.file("graph4.png", basePic4, {base64: true});
+    zip.file("graph5.png", basePic5, {base64: true});
+    zip.file("graph6.png", basePic6, {base64: true});
+    zip.file("graph7.png", basePic7, {base64: true});
+    zip.file("graph8.png", basePic8, {base64: true});
+
+    zip.generateAsync({type:"blob"})
+    .then(function(content) {
+    saveAs(content, "school_notifier_graph_reports.zip");
+    });
+  }
+</script>
+{% endblock %}

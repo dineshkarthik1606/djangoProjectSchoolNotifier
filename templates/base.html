@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>School Notifier</title>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body class="override">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">School Notifier</a>
+            </div>
+           
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    {% if user.is_authenticated %}
+                        <li><a href="/reporting">Reports generator</a></li>
+                        <li><a href="/chatgpt">Template generator</a></li>
+                        <li><a href="/sendMessage">Send Message</a></li>
+                        <li><a href="/accounts/logout">Logout</a></li>
+                    {% else %}
+                        <li><a href="/accounts/login">Login</a></li>
+                        <li><a href="/accounts/signup">Signup</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+    <div class="container">
+        <div class="row">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+   
+    <footer style="margin-top: 350px">
+            <div class="row well ml-t">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <span style="float:left; margin-left: 20px" class="m-t">Copyright &copy <a href="#" target="_blank">www.dinesh.com</a> 2023</span>
+                        <span style="float:right">All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,539 @@
+Watching for file changes with StatReloader
+"GET /reporting/ HTTP/1.1" 200 7559
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /reporting/schoolReports HTTP/1.1" 200 37
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/schoolnotifier/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /reporting/ HTTP/1.1" 200 7560
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /reporting/schoolReports HTTP/1.1" 200 7657
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5163
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5374
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5163
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5374
+"GET /reporting/ HTTP/1.1" 200 7560
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /reporting/ HTTP/1.1" 200 7560
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /reporting/schoolReports HTTP/1.1" 200 7657
+"POST /reporting/schoolReports HTTP/1.1" 200 7657
+- Broken pipe from ('127.0.0.1', 57764)
+- Broken pipe from ('127.0.0.1', 57816)
+"POST /reporting/schoolReports HTTP/1.1" 200 7657
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /reporting/schoolReports HTTP/1.1" 200 7657
+"POST /reporting/schoolReports HTTP/1.1" 200 7657
+- Broken pipe from ('127.0.0.1', 57780)
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /reporting/schoolReports HTTP/1.1" 200 7657
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /reporting/ HTTP/1.1" 200 7560
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /reporting/ HTTP/1.1" 200 7560
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+Internal Server Error: /reporting/schoolReports
+Traceback (most recent call last):
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py", line 44, in schoolReports
+    return redirect("reporting")
+NameError: name 'redirect' is not defined
+"POST /reporting/schoolReports HTTP/1.1" 500 68875
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /reporting/ HTTP/1.1" 200 7657
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /reporting/ HTTP/1.1" 200 7560
+Internal Server Error: /reporting/schoolReports
+Traceback (most recent call last):
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py", line 45, in schoolReports
+    return redirect("reporting")
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'reporting' not found. 'reporting' is not a valid view function or pattern name.
+"POST /reporting/schoolReports HTTP/1.1" 500 87033
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /reporting/ HTTP/1.1" 200 7657
+"GET /reporting/ HTTP/1.1" 200 7560
+"POST /reporting/schoolReports HTTP/1.1" 302 0
+"GET /reporting/ HTTP/1.1" 200 7657
+"GET /reporting/ HTTP/1.1" 200 7560
+"POST /reporting/schoolReports HTTP/1.1" 302 0
+"GET /reporting/ HTTP/1.1" 200 7657
+"POST /reporting/schoolReports HTTP/1.1" 302 0
+"GET /reporting/ HTTP/1.1" 200 7657
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 284669
+"GET /sendMessage/ HTTP/1.1" 200 5163
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5605
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 5617
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+Internal Server Error: /sendMessage/
+Traceback (most recent call last):
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py", line 50, in sendMessage
+    t1.join()
+UnboundLocalError: local variable 't1' referenced before assignment
+"POST /sendMessage/ HTTP/1.1" 500 64212
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5718
+"GET /sendMessage/ HTTP/1.1" 200 5617
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5718
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5617
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5718
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5617
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5718
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5617
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 5617
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5718
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5617
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5718
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5617
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5718
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5617
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5718
+"GET /sendMessage/ HTTP/1.1" 200 5750
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 5751
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 5751
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 5751
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 6263
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 6263
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 6263
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 6260
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 6343
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 6343
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 6343
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 6554
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 6343
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 6554
+"GET /admin/sendMessage/batch/ HTTP/1.1" 200 15797
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET /admin/sendMessage/batch/36/change/ HTTP/1.1" 200 14597
+"GET /admin/jsi18n/ HTTP/1.1" 200 3343
+"GET / HTTP/1.1" 200 281625
+"GET /chatgpt/ HTTP/1.1" 200 9477
+"POST /chatgpt/ HTTP/1.1" 200 9776
+"GET /chatgpt/ HTTP/1.1" 200 9852
+"GET /chatgpt/ HTTP/1.1" 200 9852
+"POST /chatgpt/ HTTP/1.1" 200 10508
+"POST /chatgpt/ HTTP/1.1" 200 10406
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /chatgpt/ HTTP/1.1" 200 9875
+"POST /chatgpt/ HTTP/1.1" 200 10347
+"POST /chatgpt/ HTTP/1.1" 200 10517
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /chatgpt/ HTTP/1.1" 200 10041
+"POST /chatgpt/ HTTP/1.1" 200 10802
+"POST /chatgpt/ HTTP/1.1" 200 9962
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /chatgpt/ HTTP/1.1" 200 9481
+"GET /chatgpt/ HTTP/1.1" 200 9481
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+Internal Server Error: /reporting/
+Traceback (most recent call last):
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/reporting/views.py", line 13, in reports
+    return render(request, 'reporting.html')
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 6: 'static', expected 'endblock'. Did you forget to register or load this tag?
+"GET /reporting/ HTTP/1.1" 500 179168
+Internal Server Error: /sendMessage/
+Traceback (most recent call last):
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py", line 64, in sendMessage
+    return render(request, "sendMessage.html")
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/template/base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static', expected 'endblock'. Did you forget to register or load this tag?
+"GET /sendMessage/ HTTP/1.1" 500 175096
+"GET / HTTP/1.1" 200 281625
+"GET /static/css/index.css HTTP/1.1" 200 1569
+"GET /reporting/ HTTP/1.1" 200 7202
+"GET /static/css/index.css HTTP/1.1" 200 1569
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /sendMessage/ HTTP/1.1" 200 5757
+"GET /static/css/index.css HTTP/1.1" 200 1569
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET / HTTP/1.1" 200 281625
+"GET /static/css/index.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 281625
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5968
+"GET /static/css/index.css HTTP/1.1" 304 0
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/schoolnotifier/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5757
+"GET /static/css/index.css HTTP/1.1" 200 1569
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5867
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5757
+"GET /static/css/index.css HTTP/1.1" 200 1569
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5867
+"GET /chatgpt/ HTTP/1.1" 200 9481
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /chatgpt/
+Traceback (most recent call last):
+  File "/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py", line 21, in chatgpt
+    result['textResult'] = openai_textGenerator(receiveText)
+  File "/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py", line 33, in openai_textGenerator
+    response = openai.Completion.create(
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/openai/api_resources/completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/openai/api_requestor.py", line 763, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.AuthenticationError: Incorrect API key provided: /Users/d****************************************************************************************************zw2R. You can find your API key at https://platform.openai.com/account/api-keys.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py", line 26, in chatgpt
+    logger.DEBUG("Error in chatGPT api response : {}".format(e))
+AttributeError: 'Logger' object has no attribute 'DEBUG'
+"POST /chatgpt/ HTTP/1.1" 500 97790
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /chatgpt/ HTTP/1.1" 200 9481
+"GET /chatgpt/ HTTP/1.1" 200 9481
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+Internal Server Error: /chatgpt/
+Traceback (most recent call last):
+  File "/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py", line 21, in chatgpt
+    result['textResult'] = openai_textGenerator(receiveText)
+  File "/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py", line 33, in openai_textGenerator
+    response = openai.Completion.create(
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/openai/api_resources/completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/openai/api_requestor.py", line 763, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.AuthenticationError: Incorrect API key provided: /Users/d****************************************************************************************************zw2R. You can find your API key at https://platform.openai.com/account/api-keys.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/dineshkumar/Documents/djangoPOC/poc/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py", line 26, in chatgpt
+    logger.DEBUG("Error in chatGPT api response : {}".format(e))
+AttributeError: 'Logger' object has no attribute 'DEBUG'
+"POST /chatgpt/ HTTP/1.1" 500 98160
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /chatgpt/ HTTP/1.1" 200 9481
+"GET /chatgpt/ HTTP/1.1" 200 9481
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /chatgpt/ HTTP/1.1" 200 9481
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /chatgpt/ HTTP/1.1" 200 9481
+"POST /chatgpt/ HTTP/1.1" 200 9481
+"POST /chatgpt/ HTTP/1.1" 200 9481
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /chatgpt/ HTTP/1.1" 200 9481
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /chatgpt/ HTTP/1.1" 200 9481
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /chatgpt/ HTTP/1.1" 200 9481
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"POST /chatgpt/ HTTP/1.1" 200 9481
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /chatgpt/ HTTP/1.1" 200 9865
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2717
+"GET /reporting/ HTTP/1.1" 200 9668
+"GET /static/css/index.css HTTP/1.1" 304 0
+"GET /chatgpt/ HTTP/1.1" 200 9481
+"POST /chatgpt/ HTTP/1.1" 200 10114
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/chatgpt/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/dineshkumar/Documents/djangoPOC/schoolnotifier/sendMessage/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /sendMessage/ HTTP/1.1" 200 5757
+"POST /sendMessage/ HTTP/1.1" 302 0
+"GET /sendMessage/ HTTP/1.1" 200 5968

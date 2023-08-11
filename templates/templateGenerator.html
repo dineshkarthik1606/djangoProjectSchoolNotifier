@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel-group" id="accordion">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-file-text" aria-hidden="true"></i>
+                                </span>Search on a topic</a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">                                
+                                        <div class="form-group">
+                                            <div id="textSuggestionBox" style="height:400px; border: 1px solid black; color:grey">
+                                                {% if textResult %}
+                                                    {{ textResult|linebreaks }}
+                                                {% else %}
+                                                    Suggestion from chatGTP
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="receiveText" style="height:75px" type="text" class="form-control" placeholder="Enter a topic" />
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success btn-sm">
+                                                <i class="fa fa-search" style="color:white"></i> Search</button>
+                                            <button type="button" class="btn btn-default btn-sm" onclick="copyTextToClipBoard()">
+                                                <i class="fa fa-copy" style="color:black"></i> Copy</button>
+                                            <div id="textCopied" class="alert alert-info" style="display:none">
+                                                Copied to clipboard!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class="fa fa-picture-o" aria-hidden="true"></i>
+                                </span>Generate image based on your input</a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">                                
+                                        <div class="form-group">
+                                            <div class="row" style="width:100%; margin:5px">
+                                                <div id="imageSuggestionBox" style="float:left;width:45%;height:400px; border: 1px solid black;color:grey">
+                                                    {% if imageResult %}
+                                                        <a href="{{ imageResult }}">{{ imageResult }}</a>
+                                                    {% else %}
+                                                        Image link
+                                                    {% endif %}
+                                                </div>
+                                                <div style="width:5%"></div>
+                                                <div id="imageSuggestionBox" style="float:right;width:50%;height:400px; border: 1px solid black;color:grey">
+                                                    {% if imageResult %}
+                                                        <img src="{{ imageResult }}" style="width:-webkit-fill-available;height:inherit" alt="Preview">
+                                                    {% else %}
+                                                        Preview
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="receiveImage" style="height:75px" type="text" class="form-control" placeholder="Enter a topic" />
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success btn-sm">
+                                                <i class="fa fa-search" style="color:white"></i> Search</button>
+                                            <button type="button" class="btn btn-default btn-sm" onclick="copyLinkToClipBoard()">
+                                                <i class="fa fa-copy" style="color:black"></i> Copy</button>
+                                            <div id="linkCopied" class="alert alert-info" style="display:none">
+                                                Copied to clipboard!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function copyTextToClipBoard() {
+        var range = document.createRange();
+        range.selectNode(document.getElementById("textSuggestionBox"));
+        window.getSelection().removeAllRanges(); // clear current selection
+        window.getSelection().addRange(range); // to select text
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();// to deselect
+        document.getElementById('textCopied').style.display="block";
+        setTimeout(function() {
+            $('#textCopied').fadeOut('fast');
+        }, 1000);
+    }
+    function copyLinkToClipBoard() {
+        var range = document.createRange();
+        range.selectNode(document.getElementById("imageSuggestionBox"));
+        window.getSelection().removeAllRanges(); 
+        window.getSelection().addRange(range); 
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();
+        document.getElementById('linkCopied').style.display="block";
+        setTimeout(function() {
+            $('#linkCopied').fadeOut('fast');
+        }, 1000);
+    }    
+</script>
+
+{% endblock %}
+

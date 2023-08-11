@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% for message in messages %}
+    {% if message.tags == 'error'%}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% else %}
+        <div class="alert alert-success">{{ message }}</div>
+    {% endif %}
+{% endfor %}
+<div style="background-color:#f1f1f1;padding:15px;">
+    <h3><i class='fas fa-graduation-cap'></i> School reports</h3>
+    <h5>Generate reports related to school all over the country with the available columns below.</h5>
+    <h6 style="margin-bottom:0px">Columns</h6>
+    <form method="POST" action="{% url 'schoolReports' %}">
+        {% csrf_token %}
+        <div style="border:1px solid grey;width:inherit;height:130px">
+            <div class="row" style="padding:10px;margin-left: 0;margin-right: 65px;">
+                <div class="col-md-2">
+                    <ul>
+                        <li><input type="checkbox" name="fieldsChecked" value="SCHOOL_ID"> School ID</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="UNIVERSITY_NO"> University No</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="TERITORRY_CODE"> Teritorry Code</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="COUNTRY"> Country</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li><input type="checkbox" name="fieldsChecked" value="NAME"> Name</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="ADDRESS"> Address</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="LATITUDE"> Latitude</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="LONGITUDE"> Longitude</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li><input type="checkbox" name="fieldsChecked" value="CITY"> City</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="STATE"> State</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="SOURCEDATE"> Source Date</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="VAL_METHOD"> Val Method</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li><input type="checkbox" name="fieldsChecked" value="ZIP"> Zip</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="ZIP4"> Zip4</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="VAL_DATE"> Val Date</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="LEVEL_"> Level</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li><input type="checkbox" name="fieldsChecked" value="TYPE"> Type</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="STATUS"> Status</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="ENROLLMENT"> Enrollment</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="START_GRAD"> Start Grade</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li><input type="checkbox" name="fieldsChecked" value="POPULATION"> Population</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="TERITORRY"> Teritorry</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="END_GRADE"> End Grade</li>
+                        <li><input type="checkbox" name="fieldsChecked" value="TEACHER_CODE"> Teacher Code</li>
+                    </ul>
+                </div>
+                <div style="float: right;margin-top: 5px;margin-right: -60px;">
+                    <button type="submit" class="downloadBtn" onclick="downloadSchoolReport()">Generate report <i class="fa fa-download" style="color:white"></i></button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div style="background-color:#f1f1f1;padding:15px;">
+    <h3><i class="fa fa-gear"></i> System Reports</h3>
+    <h5>Generate report related to messages sent using the application.
+        <form method="POST" action="{% url 'systemReports' %}">
+            {% csrf_token %}
+            <div style="float: right;margin-right: 15px;margin-top: -20px;">
+                <button type="submit" class="downloadBtn" onclick="downloadSystemReport()">Generate report <i class="fa fa-download" style="color:white"></i></button>
+            </div>
+        <form>
+    </h5>
+    
+</div>
+
+{% endblock %}
