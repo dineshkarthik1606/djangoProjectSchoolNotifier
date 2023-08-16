@@ -32,7 +32,7 @@ def schoolReports(request):
         school_data = pd.DataFrame.from_dict(cached_school_data)
     else:
         logger.info("No data available in cache")
-        response_API = requests.get('http://127.0.0.1:5000/get-kaggle-data/andrewmvd/us-schools-dataset?select=Private_Schools.csv')
+        response_API = requests.get('https://flaskkaggledatacollector-04d6cc99bdb6.herokuapp.com/get-kaggle-data/andrewmvd/us-schools-dataset?select=Private_Schools.csv')
         response_json = response_API.json()
 
         school_data = pd.DataFrame.from_dict(response_json)
