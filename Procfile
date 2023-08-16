@@ -1,1 +1,1 @@
-web: gunicorn djangoschoolnotifier.wsgi --log-file -
+web: gunicorn schoolnotifier.wsgi --log-file -
