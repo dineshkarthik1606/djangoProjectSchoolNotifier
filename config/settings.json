@@ -1,9 +1,9 @@
 {
     "telegram":{
-        "apiToken":"6352475164:AAFxJoZhrk_Iguu4aYfOR_6SmY10dk7voxg",
-        "chatID":"-901545514"
+        "apiToken":"xxxx",
+        "chatID":"-xxxx"
     },
     "openapi": {
-        "api_key":"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"
+        "api_key":"sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     }
 }
