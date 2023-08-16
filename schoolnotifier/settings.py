@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-e#3wyti1vx%=l85*t@748&9@8v@!aw%s+5=64q$*o&%_(&g!!_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'djangoschoolnotifier-981350d34e1a.herokuapp.com']
 
 
 # Application definition
