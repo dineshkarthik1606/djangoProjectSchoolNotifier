@@ -26,3 +26,6 @@ This app also contains a functionality to send messages to telegram channel. To 
 4. Look at the URL at the top of the screen. The digits behind the letter “g” are actually your chat ID. Just add “-“ in front of the numbers.
 5. Replace your **apiToken** and **chatID** in **settings.json** under the **telegram** key.
 
+For deploying to Heroku server create a Procfile with following content and create an app in Heroku CLI and link it using Github and deploy.
+
+**web: gunicorn YOUR_PROJECT_NAME.wsgi --log-file -**
